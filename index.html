@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="vendors/linericon/style.css">
   <link rel="stylesheet" href="vendors/owl-carousel/owl.theme.default.min.css">
   <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
-
+  <link rel="stylesheet" href="css/login-register.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -43,7 +43,7 @@
 
             <ul class="navbar-right">
               <li class="nav-item">
-                <button class="button button-header bg">Log In</button>
+                <button class="button button-header bg" data-toggle="modal" href="javascript:void(0)" onclick="openLoginModal();">Log In</button>
               </li>
             </ul>
           </div> 
@@ -72,10 +72,9 @@
                 them in their day to day software development activities. 
                 There is need of a system which can connect to applications, mine
                 & analyze data and provide results to stakeholders whenever they need it.
-                JARVIS is built with one singular purpose in mind i.e. maximize the time 
-                your programmers spend on coding. 
+                JARVIS is built with one singular purpose in mind i.e. maximize your coding time. 
               </p>
-              <a class="button bg" href="#">Get Started</a>
+              <a class="button bg" data-toggle="modal" href="javascript:void(0)" onclick="openRegisterModal();">Get Started</a>
             </div>
           </div>
         </div>
@@ -310,6 +309,55 @@
       </div>
     </section>
     <!--================ End Clients Logo Area =================-->
+    
+    <div class="modal fade login" id="loginModal">
+      <div class="modal-dialog login animated">
+          <div class="modal-content">
+             <div class="modal-header">
+                    <h4 class="modal-title">Login</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="box">
+                         <div class="content">
+                            <div class="error"></div>
+                            <div class="form loginBox">
+                                <form method="" action="" accept-charset="UTF-8">
+                                <input id="email" class="form-control" type="text" placeholder="Email" name="email">
+                                <input id="password" class="form-control" type="password" placeholder="Password" name="password">
+                                <input class="btn btn-default btn-login" type="button" value="Login" onclick="loginAjax()">
+                                </form>
+                            </div>
+                         </div>
+                    </div>
+                    <div class="box">
+                        <div class="content registerBox" style="display:none;">
+                         <div class="form">
+                            <form method="" html="{:multipart=>true}" data-remote="true" action="" accept-charset="UTF-8">
+                            <input id="email" class="form-control" type="text" placeholder="Email" name="email">
+                            <input id="password" class="form-control" type="password" placeholder="Password" name="password">
+                            <input id="password_confirmation" class="form-control" type="password" placeholder="Repeat Password" name="password_confirmation">
+                            <input class="btn btn-default btn-register" type="button" value="Create account" name="commit">
+                            </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="forgot login-footer">
+                        <span>Looking to
+                             <a href="javascript: showRegisterForm();">create an account</a>
+                        ?</span>
+                    </div>
+                    <div class="forgot register-footer" style="display:none">
+                         <span>Already have an account?</span>
+                         <a href="javascript: showLoginForm();">Login</a>
+                    </div>
+                </div>
+          </div>
+      </div>
+    </div>
+    <!--================ End Login Modal Area =================-->
   </main>
 
 
@@ -319,5 +367,6 @@
   <script src="js/jquery.ajaxchimp.min.js"></script>
   <script src="js/mail-script.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/login-register.js"></script>
 </body>
 </html>
