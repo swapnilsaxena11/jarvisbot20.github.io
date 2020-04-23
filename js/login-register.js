@@ -44,21 +44,56 @@ function openRegisterModal(){
 }
 
 function loginAjax(){
-    form_data = new FormData(this);
-    $.post("/login",
+  var email_id = document.getElementById("login_email").innerHTML;
+  var password = document.getElementById("login_password").innerHTML;
+  
+  $.post("/login",
   {
-    email: form_data["email"],
-    password: form_data["password"]
-  },
-  function(data){
-    if(data["statusCode"]==200){
+      email : email_id,
+      password : password
+      
+  },function(data){
+     if(data["statusCode"]==200){
         windows.localStorage.setItem("auth_token", data["auth_token"]);
-        windows.location.replace("/integrations.html");
+        windows.location.replace("/home");
     }
     else{
         shakeModal();
     }
   });
+
+}
+
+function signupAjax(){
+    
+    var email_id = document.getElementById("signup_email").innerHTML;
+    var username= document.getElementById("username").innerHTML;
+    var password = document.getElementById("signup_password").innerHTML;
+    var companyname = document.getElementById("company-name").innerHTML;
+    var companyurl = document.getElementById("company-url").innerHTML;
+    var password_r = document.getElementById("password_confirmation").innerHTML;
+    
+    if(password!=password_r){
+        shakeModal();
+    }
+    else{
+        
+        $.post("/signup",
+        {
+            email : email_id,
+            username : username,
+            company_name : companyname,
+            company_url : companyurl,
+            password : password
+        },function(data){
+            if(data["statusCode"]==200){
+                windows.localStorage.setItem("auth_token", data["auth_token"]);
+            }
+            else{
+                shakeModal();
+            }
+        });
+    }
 }
 
 function shakeModal(){
