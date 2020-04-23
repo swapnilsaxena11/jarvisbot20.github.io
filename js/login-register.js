@@ -47,7 +47,7 @@ function loginAjax(){
   var email_id = document.getElementById("login_email").innerHTML;
   var password = document.getElementById("login_password").innerHTML;
   
-  $.post("/login",
+  $.post("http://13.233.168.38/login",
   {
       email : email_id,
       password : password
@@ -78,7 +78,7 @@ function signupAjax(){
     }
     else{
         
-        $.post("/signup",
+        $.post("http://13.233.168.38/signup",
         {
             email : email_id,
             username : username,
