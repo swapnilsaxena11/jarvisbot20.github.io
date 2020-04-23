@@ -1,11 +1,3 @@
-/*
- *
- * login-register modal
- * Autor: Creative Tim
- * Web-autor: creative.tim
- * Web script: http://creative-tim.com
- * 
- */
 function showRegisterForm(){
     $('.loginBox').fadeOut('fast',function(){
         $('.registerBox').fadeIn('fast');
@@ -47,7 +39,7 @@ function loginAjax(){
   var email_id = document.getElementById("login_email").innerHTML;
   var password = document.getElementById("login_password").innerHTML;
   
-  $.post("http://13.233.168.38/login",
+  $.post("https://codefundo2019.tk/login",
   {
       email : email_id,
       password : password
@@ -78,7 +70,7 @@ function signupAjax(){
     }
     else{
         
-        $.post("http://13.233.168.38/signup",
+        $.post("https://codefundo2019.tk/signup",
         {
             email : email_id,
             username : username,
