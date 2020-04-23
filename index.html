@@ -323,8 +323,8 @@
                             <div class="error"></div>
                             <div class="form loginBox">
                                 <form method="" action="" accept-charset="UTF-8">
-                                <input id="email" class="form-control" type="text" placeholder="Email" name="email">
-                                <input id="password" class="form-control" type="password" placeholder="Password" name="password">
+                                <input id="login_email" class="form-control" type="text" placeholder="Email" name="email">
+                                <input id="login_password" class="form-control" type="password" placeholder="Password" name="password">
                                 <input class="btn btn-default btn-login" type="button" value="Login" onclick="loginAjax()">
                                 </form>
                             </div>
@@ -334,11 +334,11 @@
                         <div class="content registerBox" style="display:none;">
                          <div class="form">
                             <form method="" html="{:multipart=>true}" data-remote="true" action="" accept-charset="UTF-8">
-                            <input id="email" class="form-control" type="text" placeholder="Email" name="email">
+                            <input id="signup_email" class="form-control" type="text" placeholder="Email" name="email">
                             <input id="username" class="form-control" type="text" placeholder="UserName" name="username">
                             <input id="company-name" class="form-control" type="text" placeholder="Company Name" name="company-name">
                             <input id="company-url" class="form-control" type="text" placeholder="Company URL" name="company-url">
-                            <input id="password" class="form-control" type="password" placeholder="Password" name="password">
+                            <input id="signup_password" class="form-control" type="password" placeholder="Password" name="password">
                             <input id="password_confirmation" class="form-control" type="password" placeholder="Repeat Password" name="password_confirmation">
                             <input class="btn btn-default btn-register" type="button" value="Create account" name="commit">
                             </form>
