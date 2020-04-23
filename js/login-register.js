@@ -53,7 +53,7 @@ function loginAjax(){
   function(data){
     if(data["statusCode"]==200){
         windows.localStorage.setItem("auth_token", data["auth_token"]);
-        windows.location.replace("/home");
+        windows.location.replace("/integrations.html");
     }
     else{
         shakeModal();
