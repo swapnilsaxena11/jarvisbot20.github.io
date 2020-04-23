@@ -46,7 +46,7 @@ function loginAjax(){
         "crossDomain": true,
         "url": "https://codefundo2019.tk/login",
         "method": "POST",
-        data : JSON.Stringify(obj)
+        data : JSON.stringify(obj)
   };
     
   $.ajax(settings).done(function(data){
