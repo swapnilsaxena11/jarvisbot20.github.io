@@ -39,12 +39,15 @@ function loginAjax(){
   var email_id = document.getElementById("login_email").innerHTML;
   var password = document.getElementById("login_password").innerHTML;
   
-  $.post("https://codefundo2019.tk/login",
-  {
+  var obj={
       email : email_id,
       password : password
       
-  },function(data){
+  }
+  
+  $.post("https://codefundo2019.tk/login",
+  data : JSON.Stringify(obj),
+  $.ajax(settings).done(function(data){
      if(data["statusCode"]==200){
         windows.localStorage.setItem("auth_token", data["auth_token"]);
         windows.location.replace("/home");
@@ -52,7 +55,7 @@ function loginAjax(){
     else{
         shakeModal();
     }
-  });
+  }));
 
 }
 
@@ -65,26 +68,35 @@ function signupAjax(){
     var companyurl = document.getElementById("company-url").innerHTML;
     var password_r = document.getElementById("password_confirmation").innerHTML;
     
-    if(password!=password_r){
+    if(password.localeCompare(password_r)!=0){
         shakeModal();
     }
     else{
-        
-        $.post("https://codefundo2019.tk/signup",
-        {
+        var obj={
             email : email_id,
             username : username,
             company_name : companyname,
             company_url : companyurl,
             password : password
-        },function(data){
+            
+        };
+        $.post("https://codefundo2019.tk/signup",
+             data : JSON.Stringify(obj),
+             $.ajax(settings).done(function(data){
             if(data["statusCode"]==200){
                 windows.localStorage.setItem("auth_token", data["auth_token"]);
+                document.getElementById("signup_email").innerHTML = "";
+                document.getElementById("signup_password").innerHTML = "";
+                document.getElementById("company-url").innerHTML = "";
+                document.getElementById("company-name").innerHTML = "";
+                document.getElementById("username").innerHTML = "";
+                document.getElementById("password_confirmation").innerHTML = "";
+                alert("Signup Successful");
             }
             else{
                 shakeModal();
             }
-        });
+        }));
     }
 }
 
