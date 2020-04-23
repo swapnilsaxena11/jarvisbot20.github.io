@@ -34,14 +34,13 @@ function openLoginModal(){
     setTimeout(function(){
         $('#loginModal').modal('show');    
     }, 230);
-    
 }
+
 function openRegisterModal(){
     showRegisterForm();
     setTimeout(function(){
         $('#loginModal').modal('show');    
-    }, 230);
-    
+    }, 230);  
 }
 
 function loginAjax(){
@@ -62,7 +61,9 @@ function loginAjax(){
         shakeModal();
     }
   });
+
 }
+
 function signupAjax(){
     
     var email_id = document.getElementById("signup_email").innerHTML;
@@ -94,6 +95,7 @@ function signupAjax(){
         });
     }
 }
+
 function shakeModal(){
     $('#loginModal .modal-dialog').addClass('shake');
              $('.error').addClass('alert alert-danger').html("Invalid email/password combination");
