@@ -75,23 +75,24 @@ function signupAjax(){
     if(password!=password_r){
         shakeModal();
     }
-    
-    $.post("/signup",
-  {
-      email : email_id,
-      username : username,
-      company_name : companyname,
-      company_url : companyurl,
-       password : password
-      
-  },function(data){
-     if(data["statusCode"]==200){
-        windows.localStorage.setItem("auth_token", data["auth_token"]);
-    }
     else{
-        shakeModal();
+        
+        $.post("/signup",
+        {
+            email : email_id,
+            username : username,
+            company_name : companyname,
+            company_url : companyurl,
+            password : password
+        },function(data){
+            if(data["statusCode"]==200){
+                windows.localStorage.setItem("auth_token", data["auth_token"]);
+            }
+            else{
+                shakeModal();
+            }
+        });
     }
-  }); 
 }
 function shakeModal(){
     $('#loginModal .modal-dialog').addClass('shake');
