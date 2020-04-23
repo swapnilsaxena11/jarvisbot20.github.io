@@ -36,23 +36,26 @@ function openRegisterModal(){
 }
 
 function loginAjax(){
-  var email_id = document.getElementById("login_email").innerHTML;
-  var password = document.getElementById("login_password").innerHTML;
+  var email_id = $("#login_email").val();
+  var password = $("#login_password").val();
   
-  var obj={email : email_id, password : password}
-  
+  var obj={"email": email_id, "password": password}
   var settings = {
         "async": true,
         "crossDomain": true,
         "url": "https://codefundo2019.tk/login",
         "method": "POST",
-        data : JSON.stringify(obj)
-  };
+        "processData": false,
+        "headers": {
+            "content-type": "application/json"
+        },
+        "data" : JSON.stringify(obj)
+  }
     
   $.ajax(settings).done(function(data){
      if(data["statusCode"]==200){
-        windows.localStorage.setItem("auth_token", data["auth_token"]);
-        windows.location.replace("/integrations.html");
+        window.localStorage.setItem("auth_token", data["auth_token"]);
+        window.location.replace("/integrations.html");
     }
     else{
         shakeModal();
