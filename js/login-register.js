@@ -40,8 +40,7 @@ function openRegisterModal(){
     showRegisterForm();
     setTimeout(function(){
         $('#loginModal').modal('show');    
-    }, 230);
-    
+    }, 230);  
 }
 
 function loginAjax(){
@@ -53,8 +52,8 @@ function loginAjax(){
   },
   function(data){
     if(data["statusCode"]==200){
-        window.localStorage.setItem("auth_token", data["auth_token"]);
-        windows.location.replace("/home");
+        windows.localStorage.setItem("auth_token", data["auth_token"]);
+        windows.location.replace("/integrations.html");
     }
     else{
         shakeModal();
