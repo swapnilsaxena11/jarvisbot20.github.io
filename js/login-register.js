@@ -33,30 +33,32 @@ function openLoginModal(){
     showLoginForm();
     setTimeout(function(){
         $('#loginModal').modal('show');    
-    }, 230);
+    }, 230);if
     
 }
 function openRegisterModal(){
     showRegisterForm();
     setTimeout(function(){
         $('#loginModal').modal('show');    
-    }, 230);
-    
+    }, 230);  
 }
 
 function loginAjax(){
-    /*   Remove this comments when moving to server
-    $.post( "/login", function( data ) {
-            if(data == 1){
-                window.location.replace("/home");            
-            } else {
-                 shakeModal(); 
-            }
-        });
-    */
-
-/*   Simulate error message from the server   */
-     shakeModal();
+    form_data = new FormData(this);
+    $.post("/login",
+  {
+    email: form_data["email"],
+    password: form_data["password"]
+  },
+  function(data){
+    if(data["statusCode"]==200){
+        windows.localStorage.setItem("auth_token", data["auth_token"]);
+        windows.location.replace("/home");
+    }
+    else{
+        shakeModal();
+    }
+  });
 }
 
 function shakeModal(){
