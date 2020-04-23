@@ -39,15 +39,20 @@ function loginAjax(){
   var email_id = document.getElementById("login_email").innerHTML;
   var password = document.getElementById("login_password").innerHTML;
   
-  $.post("https://codefundo2019.tk/login",
-  {
-      email : email_id,
-      password : password
-      
-  },function(data){
+  var obj={email : email_id, password : password}
+  
+  var settings = {
+        "async": true,
+        "crossDomain": true,
+        "url": "https://codefundo2019.tk/login",
+        "method": "POST",
+        data : JSON.Stringify(obj)
+  };
+    
+  $.ajax(settings).done(function(data){
      if(data["statusCode"]==200){
         windows.localStorage.setItem("auth_token", data["auth_token"]);
-        windows.location.replace("/home");
+        windows.location.replace("/integrations.html");
     }
     else{
         shakeModal();
