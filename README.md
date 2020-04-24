@@ -1,5 +1,3 @@
-**This README files contains instructions in the format that JARVIS is able to interpret**
-
 ## Installation Instructions
 
 ### Ubuntu
