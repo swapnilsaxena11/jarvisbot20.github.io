@@ -102,8 +102,8 @@ function signupAjax(){
         };
         $.ajax(settings).done(function(data){
             if(data["statusCode"]==200){
-                alert("Successful signup");
                 window.localStorage.setItem("auth_token", data["auth_token"]);
+                window.location.replace("/integrations.html");
             }
             else{
                 shakeModal();
