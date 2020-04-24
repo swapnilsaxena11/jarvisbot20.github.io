@@ -12,5 +12,5 @@ http-server
 ### Windows
 ```shell
 git clone https://github.com/jarvisbot20/jarvisbot20.github.io
-cd jarvisbot20.github.io
+dir jarvisbot20.github.io
 ```
