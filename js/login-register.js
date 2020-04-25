@@ -103,7 +103,13 @@ function signupAjax(){
         $.ajax(settings).done(function(data){
             if(data["statusCode"]==200){
                 window.localStorage.setItem("auth_token", data["auth_token"]);
-                window.location.replace("/integrations.html");
+                $("#signup_email").val("");
+                $("#signup_password").val("");
+                $("#username").val("");
+                $("#company-url").val("");
+                $("#company-name").val("");
+                $("#password_confirmation").val("");
+                alert("Successful signup");
             }
             else{
                 shakeModal();
