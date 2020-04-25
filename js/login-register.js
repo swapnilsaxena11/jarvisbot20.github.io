@@ -1,11 +1,3 @@
-/*
- *
- * login-register modal
- * Autor: Creative Tim
- * Web-autor: creative.tim
- * Web script: http://creative-tim.com
- * 
- */
 function showRegisterForm(){
     $('.loginBox').fadeOut('fast',function(){
         $('.registerBox').fadeIn('fast');
@@ -75,6 +67,7 @@ function loginAjax(){
 
 }
 
+
 function signupAjax(){
     
     var email_id =$("#signup_email").val();
@@ -109,8 +102,8 @@ function signupAjax(){
         };
         $.ajax(settings).done(function(data){
             if(data["statusCode"]==200){
-                alert("Successful signup");
                 window.localStorage.setItem("auth_token", data["auth_token"]);
+                window.location.replace("/integrations.html");
             }
             else{
                 shakeModal();
