@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Jarvis Bots</title>
+	<link rel="icon" href="img/logo.png" type="image/png">
+
+  <link rel="stylesheet" href="vendors/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="vendors/fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="vendors/themify-icons/themify-icons.css">
+  <link rel="stylesheet" href="vendors/linericon/style.css">
+  <link rel="stylesheet" href="vendors/owl-carousel/owl.theme.default.min.css">
+  <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/login-register.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body >
+  <!--================Header Menu Area =================-->
+  <header class="header_area">
+    <div class="main_menu">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container box_1620">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <a class="navbar-brand logo_h" href="#">
+            <img style="max-width: 80px;max-height: 60px;"src="img/logo.png" alt="">
+            <span style="color: white;text-align: center;"><b>JARVIS</b></span>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse offset" id="navbarSupportedContent"> 
+            <ul class="nav navbar-nav menu_nav justify-content-end">
+              <li class="nav-item active"><a class="nav-link" href="#">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="#features">Features</a>
+              <li class="nav-item"><a class="nav-link" href="#usecases">Use cases</a></li>
+              <li class="nav-item"><a class="nav-link" href="#integrations">Integrations</a></li>
+            </ul>
+
+            <ul class="navbar-right">
+              <li class="nav-item">
+                <button class="button button-header bg" data-toggle="modal" href="javascript:void(0)" onclick="openLoginModal();">Log In</button>
+              </li>
+            </ul>
+          </div> 
+        </div>
+      </nav>
+    </div>
+  </header>
+  <!--================Header Menu Area =================-->
+
+
+  <main class="side-main">
+    <!--================ Hero sm Banner start =================-->      
+    <section class="hero-banner mb-30px">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-7">
+            <div class="hero-banner__img">
+              <img class="img-fluid" src="img/banner/hero-banner.png" alt="">
+            </div>
+          </div>
+          <div class="col-lg-5 pt-5">
+            <div class="hero-banner__content">
+              <h1>Streamline Product Development Cycles</h1>
+              <p align="justify">
+                Today's organizations have multiple tools and systems to help assist
+                them in their day to day software development activities. 
+                There is need of a system which can connect to applications, mine
+                & analyze data and provide results to stakeholders whenever they need it.
+                JARVIS is built with one singular purpose in mind i.e. maximize your coding time. 
+              </p>
+              <a class="button bg" data-toggle="modal" href="javascript:void(0)" onclick="openRegisterModal();">Get Started</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--================ Hero sm Banner end =================-->
+
+    <!--================ Feature section start =================-->      
+    <section class="section-margin" id="features">
+      <div class="container">
+        <div class="section-intro pb-85px text-center">
+          <h2 class="section-intro__title">Features</h2>
+          <p class="section-intro__subtitle" style="text-align: justify;">
+            We provide a host of features to help you through every phase 
+            of your product development lifecycle all the way from design 
+            through coding to maintenance and updation.
+          </p>
+        </div>
+
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4">
+              <div class="card card-feature text-center text-lg-left mb-4 mb-lg-0">
+                <span class="card-feature__icon">
+                  <i class="ti-mouse-alt"></i>
+                </span>
+                <h3 class="card-feature__title">Product Design</h3>
+                <p class="card-feature__subtitle">
+                  We help you through the design phase of your product by
+                  analyzing all your customer stories and figma reviews on 
+                  existing product designs.  
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card card-feature text-center text-lg-left mb-4 mb-lg-0">
+                <span class="card-feature__icon">
+                  <i class="ti-package"></i>
+                </span>
+                <h3 class="card-feature__title">Product Development</h3>
+                <p class="card-feature__subtitle">
+                  In the development phase of your product we collect 
+                  Trello tasks, version deadlines, feature specs and 
+                  test results to compile plan of actions.
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card card-feature text-center text-lg-left mb-4 mb-lg-0">
+                <span class="card-feature__icon">
+                  <i class="ti-headphone-alt"></i>
+                </span>
+                <h3 class="card-feature__title">Product Maintenance</h3>
+                <p class="card-feature__subtitle">
+                  For product maintenance, we provide aggregated customer 
+                  feedbacks correlating them back with user data to help 
+                  you get your priorities right.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--================ Feature section end =================-->      
+    
+    <!--================ about section start =================-->      
+    <section class="section-padding--small bg-magnolia">
+      <div class="container">
+        <div class="row no-gutters align-items-center">
+          <div class="col-md-5 mb-5 mb-md-0">
+            <div class="about__content">
+              <h2>Leading the Automated Product Development Revolution</h2>
+              <p style="text-align: justify;">
+                Managed public cloud services, automated deployment pipelines,
+                containerized applications, AGILE development have brought about 
+                the next generation of software development. You need to keep on 
+                par with this trend without compromising product quality and crucial
+                data. At JARVIS Bots, we understand this and provide a delete as 
+                default cloud environment.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-7">
+            <div class="about__img">
+              <img class="img-fluid" src="img/home/about.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--================ about section end =================-->      
+    
+    <!--================ Offer section start =================-->      
+    <section class="section-margin" id="usecases">
+      <div class="container">
+        <div class="section-intro pb-85px text-center">
+          <h2 class="section-intro__title">Use Cases</h2>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6">
+
+            <div class="row offer-single-wrapper">
+              <div class="col-lg-6 offer-single">
+                <div class="card offer-single__content text-center">
+                  <h4>Project Installation</h4>
+                  <p>
+                    This functionality helps the user setup/install a 
+                    project by taking in speech inputs and linking with github 
+                    repos and docker containers.
+                  </p>
+                </div>
+              </div>
+              
+              <div class="col-lg-6 offer-single">
+                <div class="card offer-single__content text-center">
+                  <h4>Implementation Details</h4>
+                  <p>
+                    This functionality helps the developer understand how a feature was 
+                    developed on a particular project. This is extremely essential for 
+                    maintenance/updation purposes.  
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="row offer-single-wrapper">
+              <div class="col-lg-6 offer-single">
+                <div class="card offer-single__content text-center">
+                  <h4>Trello Task Creation</h4>
+                  <p>
+                    This functionality helps the scrum master create and assign a Trello task while a meeting is in progress
+                  </p>
+                </div>
+              </div>
+              
+              <div class="col-lg-6 offer-single">
+                <div class="card offer-single__content text-center">
+                  <h4>
+                    Customer Conversation Summary
+                  </h4>
+                  <p>
+                    Help the developer understand how a feature/product came into existence by summarizing customer stories till complete invoicing.
+                  </p>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="row offer-single-wrapper">
+              <div class="col-lg-6 offer-single">
+                <div class="card offer-single__content text-center">
+                  <h4>
+                    Project Status
+                  </h4>
+                  <p>
+                    This functionality informs the developer when the next release milestone is due, what percentage of issues are complete/pending and what issues need to be completed before the deadline in order of priority.
+                  </p>
+                </div>
+              </div>
+              
+              <div class="col-lg-6 offer-single">
+                <div class="card offer-single__content text-center">
+                  <h4>DevOps and Testing Report</h4>
+                  <p>
+                    This functionality helps the developer objectively evaluate the unit test and integration test reports,
+                    along with CI/CD process from container creation all the way to deployment on the cloud
+                  </p>
+                </div>
+              </div>
+              
+            </div>
+
+          </div>
+          <div class="col-lg-6">
+            <div class="offer-single__img">
+              <img class="img-fluid" src="img/home/offer.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--================ Offer section end =================-->      
+
+    <!--================ Integrations section start =================-->      
+    <section class="section-padding--small bg-magnolia">
+      <div class="container">
+        <div class="row align-items-center pt-xl-3 pb-xl-5">
+          <div class="col-lg-6">
+            <div class="solution__img text-center text-lg-left mb-4 mb-lg-0">
+              <img class="img-fluid" src="img/home/solution.png" alt="">
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="solution__content">
+              <h2>Reduce product development times by 20%</h2>
+              <p>
+                We use JARVIS to manage our own product development lifecycles
+                and we have noticed it saves our developer teams 100s of hours switching 
+                between application windows, going through data and interpreting it.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--================ Solution section end =================-->      
+
+    <!--================ Integrations Area =================-->
+    <section class="clients_logo_area section-padding" id="integrations">
+      <div class="container">
+        <h2 style="text-align: center;">Our Integrations</h2>
+        <br><br>
+        <div class="clients_slider owl-carousel">
+          <div class="item">
+            <img src="img/clients-logo/travis.png" style="max-width: 80px;" alt="">
+          </div>
+          <div class="item">
+            <img src="img/clients-logo/gmail_logo.png" style="max-width: 80px;" alt="">
+          </div>
+          <div class="item">
+            <img src="img/clients-logo/github-logo.svg" style="max-width: 80px;" alt="">
+          </div>
+          <div class="item">
+            <img src="img/clients-logo/atlassian.png" style="max-width: 80px;" alt="">
+          </div>
+          <div class="item">
+            <img src="img/clients-logo/trello.png" style="max-width: 80px;" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--================ End Clients Logo Area =================-->
+    
+    <div class="modal fade login" id="loginModal">
+      <div class="modal-dialog login animated">
+          <div class="modal-content">
+             <div class="modal-header">
+                    <h4 class="modal-title">Login</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="box">
+                         <div class="content">
+                            <div class="error"></div>
+                            <div class="form loginBox">
+                                <form method="" action="" accept-charset="UTF-8">
+                                <input id="login_email" class="form-control" type="text" placeholder="Email" name="email">
+                                <input id="login_password" class="form-control" type="password" placeholder="Password" name="password">
+                                <input class="btn btn-default btn-login" type="button" value="Login" onclick="loginAjax()">
+                                </form>
+                            </div>
+                         </div>
+                    </div>
+                    <div class="box">
+                        <div class="content registerBox" style="display:none;">
+                         <div class="form">
+                            <form method="" html="{:multipart=>true}" data-remote="true" action="" accept-charset="UTF-8">
+                            <input id="signup_email" class="form-control" type="text" placeholder="Email" name="email">
+                            <input id="username" class="form-control" type="text" placeholder="UserName" name="username">
+                            <input id="company-name" class="form-control" type="text" placeholder="Company Name" name="company-name">
+                            <input id="company-url" class="form-control" type="text" placeholder="Company URL" name="company-url">
+                            <input id="signup_password" class="form-control" type="password" placeholder="Password" name="password">
+                            <input id="password_confirmation" class="form-control" type="password" placeholder="Repeat Password" name="password_confirmation">
+                            <input class="btn btn-default btn-register" type="button" value="Create account" name="commit" onclick="signupAjax()">
+                            </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="forgot login-footer">
+                        <span>Looking to
+                             <a href="javascript: showRegisterForm();">create an account</a>
+                        ?</span>
+                    </div>
+                    <div class="forgot register-footer" style="display:none">
+                         <span>Already have an account?</span>
+                         <a href="javascript: showLoginForm();">Login</a>
+                    </div>
+                </div>
+          </div>
+      </div>
+    </div>
+    <!--================ End Login Modal Area =================-->
+  </main>
+
+
+  <script src="vendors/jquery/jquery-3.2.1.min.js"></script>
+  <script src="vendors/bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="vendors/owl-carousel/owl.carousel.min.js"></script>
+  <script src="js/jquery.ajaxchimp.min.js"></script>
+  <script src="js/mail-script.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/login-register.js"></script>
+</body>
+</html>
